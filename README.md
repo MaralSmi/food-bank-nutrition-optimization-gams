@@ -1,113 +1,122 @@
-# Food Bank Nutrition Optimization Using GAMS
+# Food Bank Location-Allocation Optimization in Tehran
 
-**Academic Implementation and Analysis of a Published Linear Programming Model**
+**Mathematical Model Extension, GAMS Implementation, and Sensitivity Analysis**
 
 ## Project Overview
 
-This repository documents an academic implementation and analysis of a published linear programming model for food bank nutrition optimization.
+This repository presents an academic optimization project investigating the hypothetical establishment of a food bank in Tehran, Iran.
 
-The project was completed collaboratively as part of an Operations Research course in the B.Sc. Industrial Engineering program at Shahid Beheshti University, Tehran, Iran.
+The project extends a published food bank nutrition optimization framework by incorporating facility location decisions and adapting selected food, cost, and geographic parameters to the Tehran context.
 
-The main objectives were to study the mathematical formulation of an existing research model, understand its optimization structure, and implement the model using GAMS.
+The study aims to explore how mathematical optimization can support food bank location planning and food resource allocation under nutritional, economic, and operational considerations.
 
-This project also provided the foundation for a subsequent academic project (OR2), in which the optimization framework was extended to a hypothetical food bank planning problem in Tehran.
+**Project date:** June 2025  
+**Academic context:** Operations Research II, B.Sc. Industrial Engineering, Shahid Beheshti University  
+**Software:** GAMS  
+**Methods:** Mathematical optimization, location-allocation modeling, sensitivity analysis, and scenario-based model verification
 
-## Research Background
+## Relationship to OR1
 
-The project is based on the following published research article:
+This project is a continuation and extension of an earlier Operations Research project (OR1).
 
-**The Food Bank of Madrid: A Linear Model for Optimal Nutrition**
+In OR1, my teammate and I collaboratively studied and implemented a published linear programming model for food bank nutrition optimization in GAMS.
 
+For OR2, I independently developed the mathematical extension for the Tehran case study. The GAMS implementation and subsequent sensitivity analyses were completed collaboratively.
+
+**Previous project:** [Food Bank Nutrition Optimization Using GAMS — OR1](https://github.com/MaralSmi/food-bank-nutrition-optimization-gams)
+
+## Original Research Foundation
+
+The mathematical foundation of this project is based on:
+
+**The Food Bank of Madrid: A Linear Model for Optimal Nutrition**  
 *International Journal of Environmental Research and Public Health*, 2020, 17(21), 8097.
 
-[Read the Original Research Article](https://doi.org/10.3390/ijerph17218097)
+[Original Research Article](https://doi.org/10.3390/ijerph17218097)
 
-The original study investigates how mathematical optimization can support food bank operations by balancing procurement costs, food availability, and the nutritional needs of beneficiary populations.
+The original research examines food procurement and nutritional allocation through mathematical optimization.
 
-Our academic project focused on studying and implementing the published model rather than proposing a new mathematical formulation.
+Our OR2 project builds upon this framework and investigates additional decisions relevant to a hypothetical food bank in Tehran.
 
-## Optimization Problem
+## Mathematical Model Extension
 
-The model aims to minimize the combined cost of food procurement and penalties associated with unmet nutritional requirements.
+The Tehran extension addresses several aspects of food bank planning.
 
-It considers:
+### 1. Facility Location
 
-- **Food procurement:** Determining the quantities of food to purchase from different food groups.
-- **Nutritional requirements:** Accounting for the nutritional needs of different beneficiary groups.
-- **Food donations:** Incorporating donated food into the available supply.
-- **Food allocation:** Distributing food resources among beneficiary groups.
-- **Nutritional balance:** Considering requirements related to macronutrients, fruits, vegetables, and protein sources.
+A facility location decision was introduced to evaluate potential locations across Tehran's 22 municipal districts.
 
-### Objective Function
+The model considers geographic relationships and distance-related restrictions to support the selection of a suitable location.
 
-The objective function minimizes:
+### 2. Food Basket Adaptation
 
-1. The total cost of purchasing food.
-2. Penalty costs associated with unmet nutritional requirements.
+The food basket assumptions were modified to better reflect the Iranian context considered in the academic case study.
 
-The optimization is performed subject to nutritional, economic, and operational constraints.
+### 3. Local Cost Parameters
 
-### Main Constraints
+Food price parameters were adapted using information available for Iran during the project period.
 
-The mathematical formulation includes constraints related to:
+These prices represent the approximate conditions considered in June 2025 and should not be interpreted as current market prices.
 
-- Nutritional requirements of beneficiary groups.
-- Limits on the contribution of macronutrients to total caloric intake.
-- Food distribution and the balance between purchases, donations, and surplus.
-- Minimum fruit and vegetable consumption.
-- Requirements concerning plant-based protein availability.
+### 4. Food Procurement and Allocation
 
-The mathematical expressions and explanations are included in the accompanying project presentation.
+The extended optimization framework considers food procurement, resource allocation, and relevant nutritional and operational constraints.
 
-## Tools and Methods
+### 5. Optimization Implementation
 
-- **GAMS:** Implementation of the mathematical optimization model.
-- **Linear Programming:** Optimization methodology.
-- **Mathematical Modeling:** Analysis of decision variables, objective function, and constraints.
-- **Research Analysis:** Examination of the published study's methodology and assumptions.
+The mathematical model was implemented in GAMS to investigate the location-allocation problem under the selected assumptions.
 
-## Repository Contents
+The repository contains the main model and additional scenario files used for sensitivity analysis and verification.
+
+## Sensitivity Analysis and Model Verification
+
+Sensitivity analysis and scenario-based verification were conducted to investigate how changes in selected input parameters and constraints affected model behavior.
+
+The experiments included:
+
+- **Maximum distance:** Modifying distance-related parameters or restrictions.
+- **Vegetable costs:** Changing selected food cost parameters.
+- **Location-related decisions:** Testing conditions involving the location decision variable associated with `y8`.
+- **Constraint modifications:** Adding or removing selected constraints to examine the resulting behavior.
+
+These tests were used to assess whether the model responded logically to alternative scenarios and to identify potential formulation issues.
+
+They do not independently establish the model's real-world validity or guarantee that all assumptions are correct.
+
+## Repository Structure
 
 | File | Description |
 |---|---|
-| `or .gms` | GAMS source code for the academic implementation of the published food bank optimization model |
-| `OR1.pdf` | University project presentation in Persian (17 slides) |
+| `or2.gms` | Main GAMS model for the Tehran food bank optimization problem |
+| `varification max distance1.gms` | Scenario examining changes in maximum distance |
+| `verification vegetable cost.gms` | Scenario examining changes in vegetable costs |
+| `verification y8.gms` | Scenario examining a location-related decision |
 | `README.md` | Project documentation |
+
+The sensitivity-analysis files contain modified parameter values or constraints for testing specific scenarios. They should be interpreted as experimental model variants rather than independent optimization projects.
+
+## Data Sources and Limitations
+
+The project was completed in **June 2025**.
+
+Locally relevant data were collected from available Iranian sources, including official sources where possible. Due to limitations in data availability and consistency, some parameters required estimates or modeling assumptions.
+
+Important limitations include:
+
+- **Time-sensitive prices:** Food prices may have changed substantially since June 2025 because of inflation.
+- **Data availability:** Some parameters could not be established using fully comprehensive or consistently reliable datasets.
+- **Simplified assumptions:** The mathematical formulation necessarily simplifies aspects of real-world food bank operations.
+- **Academic scope:** The results represent a hypothetical planning case study rather than an operational recommendation.
+
+The model and its results should be interpreted within these limitations.
 
 ## Project Presentation
 
-A 17-slide presentation was prepared to explain the original research and mathematical formulation.
-
-The presentation covers:
-
-- Introduction to the Madrid Food Bank problem.
-- Research objectives and methodology.
-- Model inputs, decision variables, and outputs.
-- Objective function and mathematical constraints.
-- Modeling assumptions.
-- Project conclusions.
+A university project presentation was prepared in Persian to explain the Tehran case study and the modeling approach.
 
 **Presentation language:** Persian (Farsi).
 
-**[View OR1 Project Presentation (PDF)](OR1.pdf)**
-
-## Relationship to OR2: Tehran Food Bank Optimization
-
-This project served as the mathematical foundation for a subsequent academic project focused on the hypothetical establishment of a food bank in Tehran, Iran.
-
-In OR2, the original optimization framework was extended and adapted to a new geographic and economic context.
-
-The extension involved:
-
-- Introducing a facility location decision for Tehran.
-- Considering geographic and distance-related factors.
-- Adapting food basket compositions to the Iranian context.
-- Updating food cost parameters using locally relevant information.
-- Conducting sensitivity analysis and scenario-based model verification.
-
-I independently developed the mathematical extension for the Tehran case study, while the GAMS implementation and sensitivity analysis were completed collaboratively.
-
-**Related repository:** [Food Bank Location-Allocation Optimization in Tehran — OR2](https://github.com/MaralSmi/tehran-food-bank-location-optimization)
+[View OR2 Project Presentation on Canva](https://www.canva.com/design/DAGnvFBnG08/vjWzapaR4JB7UmTYOXAZ6w/view)
 
 ## Team Members and Contributions
 
@@ -116,27 +125,34 @@ This project was completed collaboratively by:
 - **Maral Esmikhani**
 - **Melika Rostami**
 
-Both team members participated in studying the published optimization model and implementing it in GAMS.
+### My Individual Contribution — Maral Esmikhani
 
-The original mathematical formulation and research findings are attributed to the authors of the referenced article.
+- Independently formulated the mathematical extension of the original food bank optimization model for the Tehran case study.
+- Developed the modeling approach for incorporating facility location and locally relevant planning considerations.
 
-## Scope and Limitations
+### Collaborative Contributions
 
-This repository documents an academic implementation of a published research model.
+- Implemented the extended model in GAMS.
+- Conducted sensitivity analysis by modifying selected parameters and constraints.
+- Performed scenario-based checks of model behavior.
 
-The project should not be interpreted as a newly developed mathematical formulation or a deployed food bank decision-support system.
-
-The accompanying presentation discusses the mathematical model and project conclusions. Exact reproduction of the original article's numerical results has not been independently established in this documentation.
+The original research model is attributed to the authors of the referenced publication.
 
 ## How to Explore the Project
 
-1. Download the GAMS source file from this repository.
-2. Open it in a compatible GAMS environment.
+1. Download the `.gms` files from this repository.
+2. Open `or2.gms` in a compatible GAMS environment.
 3. Review the sets, parameters, decision variables, objective function, and constraints.
-4. Consult the accompanying PDF presentation for explanations of the mathematical formulation.
-5. Run the model using an appropriate solver, subject to the availability of any required input data.
+4. Examine the sensitivity-analysis files to identify changes made for individual scenarios.
+5. Run the models using an appropriate GAMS solver, subject to the availability of required data and software.
 
-## Reference
+## Related Project
+
+**OR1 — Food Bank Nutrition Optimization Using GAMS**
+
+[View the Original Model Implementation](https://github.com/MaralSmi/food-bank-nutrition-optimization-gams)
+
+## Research Reference
 
 *The Food Bank of Madrid: A Linear Model for Optimal Nutrition.* (2020). *International Journal of Environmental Research and Public Health*, 17(21), 8097.
 
