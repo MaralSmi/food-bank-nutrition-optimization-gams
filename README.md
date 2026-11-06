@@ -1,100 +1,101 @@
 # Food Bank Nutrition Optimization Using GAMS
 
-**Academic Implementation of a Published Linear Programming Model**
+**Academic Implementation and Analysis of a Published Linear Programming Model**
 
 ## Project Overview
 
-This repository presents an academic implementation and analysis of a published linear programming model for food bank nutrition optimization.
+This repository documents an academic implementation and analysis of a published linear programming model for food bank nutrition optimization.
 
 The project was completed collaboratively as part of an Operations Research course in the B.Sc. Industrial Engineering program at Shahid Beheshti University, Tehran, Iran.
 
-The main purpose was to study an existing research model, understand its mathematical formulation, and implement the optimization problem using GAMS.
+The main objectives were to study the mathematical formulation of an existing research model, understand its optimization structure, and implement the model using GAMS.
 
-This project subsequently served as the foundation for a second project (OR2), in which the model was extended and adapted to a hypothetical food bank location-allocation problem in Tehran.
+This project also provided the foundation for a subsequent academic project (OR2), in which the optimization framework was extended to a hypothetical food bank planning problem in Tehran.
 
 ## Research Background
 
-The project is based on the following published research:
+The project is based on the following published research article:
 
-**The Food Bank of Madrid: A Linear Model for Optimal Nutrition**  
+**The Food Bank of Madrid: A Linear Model for Optimal Nutrition**
+
 *International Journal of Environmental Research and Public Health*, 2020, 17(21), 8097.
 
 [Read the Original Research Article](https://doi.org/10.3390/ijerph17218097)
 
-The study explores the application of mathematical optimization to food bank operations, particularly the allocation of food resources while considering nutritional needs and procurement costs.
+The original study investigates how mathematical optimization can support food bank operations by balancing procurement costs, food availability, and the nutritional needs of beneficiary populations.
 
-Our academic project focused on studying and implementing the mathematical structure of this published model.
+Our academic project focused on studying and implementing the published model rather than proposing a new mathematical formulation.
 
 ## Optimization Problem
 
-The model seeks to minimize the combined cost of food procurement and penalties associated with unmet nutritional requirements.
+The model aims to minimize the combined cost of food procurement and penalties associated with unmet nutritional requirements.
 
-The formulation considers:
+It considers:
 
 - **Food procurement:** Determining the quantities of food to purchase from different food groups.
 - **Nutritional requirements:** Accounting for the nutritional needs of different beneficiary groups.
 - **Food donations:** Incorporating donated food into the available supply.
 - **Food allocation:** Distributing food resources among beneficiary groups.
-- **Nutritional balance:** Considering requirements related to macronutrients, fruits and vegetables, and protein sources.
+- **Nutritional balance:** Considering requirements related to macronutrients, fruits, vegetables, and protein sources.
 
 ### Objective Function
 
-The optimization objective combines:
+The objective function minimizes:
 
 1. The total cost of purchasing food.
-2. Penalty costs associated with unmet nutritional needs.
+2. Penalty costs associated with unmet nutritional requirements.
 
-The model aims to minimize these costs while satisfying its nutritional and operational constraints.
+The optimization is performed subject to nutritional, economic, and operational constraints.
 
 ### Main Constraints
 
-The mathematical formulation includes constraints addressing:
+The mathematical formulation includes constraints related to:
 
-- Minimum nutritional requirements for beneficiary groups.
+- Nutritional requirements of beneficiary groups.
 - Limits on the contribution of macronutrients to total caloric intake.
 - Food distribution and the balance between purchases, donations, and surplus.
 - Minimum fruit and vegetable consumption.
-- Requirements related to the availability of plant-based proteins.
+- Requirements concerning plant-based protein availability.
 
-The mathematical expressions and their explanations are documented in the accompanying presentation.
+The mathematical expressions and explanations are included in the accompanying project presentation.
 
 ## Tools and Methods
 
-- **GAMS:** Mathematical optimization model implementation.
-- **Linear Programming:** Optimization framework.
-- **Mathematical Modeling:** Analysis of the published objective function, decision variables, and constraints.
-- **Research Analysis:** Examination of the original study's assumptions, formulation, and conclusions.
+- **GAMS:** Implementation of the mathematical optimization model.
+- **Linear Programming:** Optimization methodology.
+- **Mathematical Modeling:** Analysis of decision variables, objective function, and constraints.
+- **Research Analysis:** Examination of the published study's methodology and assumptions.
 
 ## Repository Contents
 
 | File | Description |
 |---|---|
-| `or .gms` | GAMS source code for the academic implementation of the published optimization model |
-| `OR1.pdf` | 17-slide university project presentation in Persian, covering the research background, mathematical formulation, constraints, and conclusions |
+| `or .gms` | GAMS source code for the academic implementation of the published food bank optimization model |
+| `OR1.pdf` | University project presentation in Persian (17 slides) |
 | `README.md` | Project documentation |
 
 ## Project Presentation
 
-A 17-slide presentation was prepared to explain the original research, mathematical model, and key concepts.
+A 17-slide presentation was prepared to explain the original research and mathematical formulation.
 
-The presentation includes:
+The presentation covers:
 
 - Introduction to the Madrid Food Bank problem.
 - Research objectives and methodology.
 - Model inputs, decision variables, and outputs.
 - Objective function and mathematical constraints.
-- Modeling assumptions and project conclusions.
+- Modeling assumptions.
+- Project conclusions.
 
 **Presentation language:** Persian (Farsi).
 
-- [View Project Presentation (PDF)](OR1.pdf)
-- [View Project Presentation on Canva](https://www.canva.com/design/DAGnvFBnG08/vjWzapaR4JB7UmTYOXAZ6w/view)
+**[View OR1 Project Presentation (PDF)](OR1.pdf)**
 
 ## Relationship to OR2: Tehran Food Bank Optimization
 
-This project provided the mathematical foundation for a subsequent academic project focused on the hypothetical establishment of a food bank in Tehran, Iran.
+This project served as the mathematical foundation for a subsequent academic project focused on the hypothetical establishment of a food bank in Tehran, Iran.
 
-In OR2, the original optimization framework was extended to address a new planning context.
+In OR2, the original optimization framework was extended and adapted to a new geographic and economic context.
 
 The extension involved:
 
@@ -106,7 +107,7 @@ The extension involved:
 
 I independently developed the mathematical extension for the Tehran case study, while the GAMS implementation and sensitivity analysis were completed collaboratively.
 
-**Related project:** [Food Bank Location-Allocation Optimization in Tehran — OR2](https://github.com/MaralSmi/tehran-food-bank-location-optimization)
+**Related repository:** [Food Bank Location-Allocation Optimization in Tehran — OR2](https://github.com/MaralSmi/tehran-food-bank-location-optimization)
 
 ## Team Members and Contributions
 
@@ -115,25 +116,25 @@ This project was completed collaboratively by:
 - **Maral Esmikhani**
 - **Melika Rostami**
 
-The team studied the published optimization model and worked together on its academic implementation in GAMS.
+Both team members participated in studying the published optimization model and implementing it in GAMS.
 
-The mathematical formulation originated from the referenced research article and is not presented as an original contribution of the project team.
+The original mathematical formulation and research findings are attributed to the authors of the referenced article.
 
 ## Scope and Limitations
 
 This repository documents an academic implementation of a published research model.
 
-The project should not be interpreted as a new mathematical formulation or as a deployed food bank decision-support system.
+The project should not be interpreted as a newly developed mathematical formulation or a deployed food bank decision-support system.
 
-The accompanying presentation discusses the mathematical formulation and project conclusions. Exact reproduction of the original paper's numerical results has not been independently established in this documentation.
+The accompanying presentation discusses the mathematical model and project conclusions. Exact reproduction of the original article's numerical results has not been independently established in this documentation.
 
 ## How to Explore the Project
 
-1. Download the GAMS source file from the repository.
-2. Open the file in a compatible GAMS environment.
-3. Examine the sets, parameters, objective function, decision variables, and constraints.
-4. Consult the presentation for explanations of the mathematical formulation.
-5. Run the model with an appropriate solver, subject to the availability of any required input data.
+1. Download the GAMS source file from this repository.
+2. Open it in a compatible GAMS environment.
+3. Review the sets, parameters, decision variables, objective function, and constraints.
+4. Consult the accompanying PDF presentation for explanations of the mathematical formulation.
+5. Run the model using an appropriate solver, subject to the availability of any required input data.
 
 ## Reference
 
