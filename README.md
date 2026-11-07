@@ -10,8 +10,7 @@ Based on the published study *The Food Bank of Madrid: A Linear Model for Optima
 
 The project was completed as part of the **Operations Research I** course at Shahid Beheshti University.
 
-**Project Date:** June 2025ر 1 لینک داده بودیم
-
+**Project Date:** June 2025
 
 **Course:** Operations Research I
 **University:** Shahid Beheshti University, Tehran, Iran
